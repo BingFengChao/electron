@@ -1,0 +1,10 @@
+// import {  } from '@/assets/utils/types.js'
+export const isObject = value => Object.prototype.toString.call(value) === '[object Object]'
+export const isArray = value => Object.prototype.toString.call(value) === '[object Array]'
+export const isString = value => Object.prototype.toString.call(value) === '[object String]'
+export const isNumber = value => Object.prototype.toString.call(value) === '[object Number]'
+export const isBoolean = value => Object.prototype.toString.call(value) === '[object Boolean]'
+export const isFunction = value => value && Object.toString.call(value) === '[object Function]'
+export const isDate = value => Object.prototype.toString.call(value) === '[object Date]'
+export const isFile = value => Object.prototype.toString.call(value) === '[object File]'
+export const isHtmlElement = value => value && value.nodeType === Node.ELEMENT_NODE

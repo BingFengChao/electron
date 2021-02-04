@@ -1,0 +1,124 @@
+// ---- <el-loading> ----
+.el-loading-mask {
+    z-index: 9999 !important;
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    .circular {
+        width: 150px !important;
+        height: 150px !important;
+    }
+    .path {
+        stroke: #fff !important;
+        stroke-width: 5 !important;
+    }
+}
+
+// ---- <el-image> ----
+.el-image .el-image-viewer__close {
+    font-size: 72px;
+    color: #fff;
+    text-shadow: 0 0 2px #000;
+}
+
+// ---- <el-date> ----
+.el-date-editor .el-range-separator {
+    min-width: 20px;
+}
+
+// ---- <el-table> ----
+.el-table__header th {
+    font-weight: bold;
+    background-color: @color-page;
+}
+
+// ---- <el-select> ----
+.el-select.btn {
+    .el-input__inner {
+        text-align: center;
+        border-radius: 20px;
+        color: #fff;
+        background-color: @color-primary;
+    }
+    .el-input__icon {
+        color: #fff;
+    }
+}
+
+// ---- <el-dialog> ----
+.el-dialog__wrapper:not(.native) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .el-dialog {
+        width: 80%;
+        height: 80%;
+        margin: 0 !important;
+        border-radius: 4px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        .el-dialog__header {
+            padding: 0 20px;
+            background-color: @color-page;
+            .el-dialog__title {
+                line-height: 60px;
+            }
+            .el-dialog__title, .el-dialog__close {
+                font-size: 24px;
+            }
+        }
+        .el-dialog__body {
+            flex-grow: 1;
+            font-size: inherit;
+            padding: 15px 30px;
+            overflow-y: auto;
+            position: relative;
+        }
+        .el-dialog__footer {
+            padding-bottom: 10px;
+            text-align: center;
+            background-color: @color-page;
+        }
+    }
+}
+
+// ---- <el-tabs> ----
+.el-tabs--card:not(.native) {
+    & + div {
+        z-index: 1;
+        overflow: auto;
+    }
+    &.small .el-tabs__item {
+        height: 56px !important;
+        font-size: 16px !important;
+        line-height: 40px !important;
+    }
+    .el-tabs__header {
+        margin-bottom: 0;
+        border-bottom: none;
+        .el-tabs__nav {
+            border: none;
+            z-index: auto;
+            .el-tabs__item {
+                border: none;
+                border-radius: 16px;
+                font-size: 24px;
+                height: 76px;
+                line-height: 60px;
+                padding: 0 30px;
+                background-color: @color-primary-disabled;
+                &.is-active {
+                    color: #fff;
+                    background-color: @color-primary;
+                    border-bottom: none;
+                }
+                & + .el-tabs__item {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    .el-tabs__content {
+        margin-top: -16px;
+        background-color: #fff;
+    }
+}
